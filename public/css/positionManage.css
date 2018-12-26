@@ -16,3 +16,14 @@
 .pagination{
 	float: right;
 }
+
+
+#tbd tr td{
+	vertical-align: middle;
+}
+#tbd .imglogo{
+	text-align: center;	
+}
+#tbd .imglogo img{
+	height: 30px;
+}

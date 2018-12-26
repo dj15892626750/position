@@ -1,4 +1,4 @@
-define(["jquery","code"],function($){
+define(["jquery"],function($){
 	function RegisetrModal(){
 		this.render();
 		this.addListener();

@@ -6,7 +6,7 @@ require.config({
 		load:"/js/loadHeader",
 		login:"/js/login-modal",
 		register:"/js/register-modal",
-		code:"/lib/jquery-plugins/jquery.code",//验证码
+
 		
 	},
 	shim:{

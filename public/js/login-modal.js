@@ -45,7 +45,6 @@ define(["jquery"],function($){
 		// 生成验证码
 		genCode() {
 			$.getJSON("/api/captcha/gen", (data)=>{
-				console.log(data);
 				$("div.validate-code").html(data.res_body.ret.data.image);
 			});
 		},

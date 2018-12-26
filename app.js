@@ -7,6 +7,7 @@ var logger = require('morgan');
 //引入路由模块
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var positionRouter = require('./routes/position');
 
 //引入express-session模块
 const session=require("express-session");
@@ -32,6 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/', indexRouter);
 app.use('/api/users', usersRouter);
+app.use('/api/position', positionRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

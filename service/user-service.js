@@ -80,6 +80,7 @@ const UserService={
 			res.send(err);
 		})
 		
+		//保存注册信息
 		UserDao.save({username,password,email}).then(data=>{
 			res.json({
 				"res_code":1,

@@ -32,9 +32,9 @@
 					</tr>
 				</thead>
 				<tbody id="tbd">
-					<tr>
+					<!--<tr>
 						<td>1</td>
-						<td>公司logo</td>
+						<td class="imglogo"><img src=""/></td>
 						<td>dd</td>
 						<td>ddd</td>
 						<td>dd</td>
@@ -45,26 +45,14 @@
 							<a href="#" data-toggle="modal" data-target="#updateModal">修改</a>
 							<a href="#">删除</a>
 						</td>
-					</tr>
+					</tr>-->
 				</tbody>
 			</table>
 			
 			<!--分页-->
 			<nav aria-label="Page navigation">
 			  <ul class="pagination">
-			  	<li>
-			      <a href="#" aria-label="Previous">
-			        <span aria-hidden="true">&laquo;</span>
-			      </a>
-			    </li>
-			    <li class="active"><a href="#">1</a></li>
-			    <li><a href="#">2</a></li>
-			    <li><a href="#">3</a></li>
-			    <li>
-			      <a href="#" aria-label="Next">
-			        <span aria-hidden="true">&raquo;</span>
-			      </a>
-			    </li>
+
 			  </ul>
 			</nav>
 		</div>
@@ -75,42 +63,42 @@
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title" id="addModalLabel">职位信息</h4>
+		        <h4 class="modal-title" id="addModalLabel">添加职位</h4>
 		      </div>
 		      <div class="modal-body">
-		        <form>
+		        <form class="add-form">
 				  <div class="form-group">
 				    <label for="company-logo">公司logo</label>
-				    <input type="file" class="form-control" id="company-logo" placeholder="输入用户名">
+				    <input type="file" class="form-control" name="logo" id="company-logo">
 				  </div>
 				  <div class="form-group">
 				    <label for="job-name">职位名称</label>
-				    <input type="text" class="form-control" id="job-named" placeholder="输入职位名">
+				    <input type="text" class="form-control" name="job_name" id="job-name" placeholder="输入职位名">
 				  </div>
 				  <div class="form-group">
 				    <label for="company-name">公司名称</label>
-				    <input type="text" class="form-control" id="company-name" placeholder="输入公司名称">
+				    <input type="text" class="form-control" name="company_name" id="company-name" placeholder="输入公司名称">
 				  </div>
 				  <div class="form-group">
 				    <label for="work-experience">工作经验</label>
-				    <input type="text" class="form-control" id="work-experience" placeholder="输入工作经验">
+				    <input type="text" class="form-control" name="work_experience" id="work-experience" placeholder="输入工作经验">
 				  </div>
 				  <div class="form-group">
 				    <label for="job-type">职位类型</label>
-				    <input type="text" class="form-control" id="job-type" placeholder="输入职位类型">
+				    <input type="text" class="form-control" name="job_type" id="job-type" placeholder="输入职位类型">
 				  </div>
 				  <div class="form-group">
 				    <label for="work-place">工作地点</label>
-				    <input type="text" class="form-control" id="work-place" placeholder="输入工作地点">
+				    <input type="text" class="form-control" name="work_place" id="work-place" placeholder="输入工作地点">
 				  </div>
 				  <div class="form-group">
 				    <label for="post-salary">岗位薪资</label>
-				    <input type="text" class="form-control" id="post-salary" placeholder="输入岗位薪资">
+				    <input type="text" class="form-control" name="salary" id="add-salary" placeholder="输入岗位薪资">
 				  </div>
 				</form>
 		      </div>
 		      <div class="modal-footer">
-		        <button type="button" class="btn btn-primary">提交</button>
+		        <button type="button" class="btn btn-primary btn-add">添加</button>
 		      </div>
 		    </div>
 		  </div>
@@ -122,47 +110,48 @@
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title" id="updateModalLabel">职位信息</h4>
+		        <h4 class="modal-title" id="updateModalLabel">修改职位</h4>
 		      </div>
 		      <div class="modal-body">
-		        <form>
+		        <form class="update-form"> 
+		        	<input type="hidden" name="_id" id="_id" value="" />
 				  <div class="form-group">
 				    <label for="company-logo">公司logo</label>
-				    <input type="file" class="form-control" id="update-company-logo" placeholder="输入用户名">
+				    <input type="file" class="form-control" name="logo" id="update-company-logo">
+				    <input type="hidden" name="logoimg" id="logo" value="" />
 				  </div>
 				  <div class="form-group">
 				    <label for="job-name">职位名称</label>
-				    <input type="text" class="form-control" id="update-job-named" value="dd" placeholder="输入职位名">
+				    <input type="text" class="form-control" name="job_name" id="update-job-name" value="dd" placeholder="输入职位名">
 				  </div>
 				  <div class="form-group">
 				    <label for="company-name">公司名称</label>
-				    <input type="text" class="form-control" id="update-company-name" value="ddd" placeholder="输入公司名称">
+				    <input type="text" class="form-control" name="company_name" id="update-company-name" value="ddd" placeholder="输入公司名称">
 				  </div>
 				  <div class="form-group">
 				    <label for="work-experience">工作经验</label>
-				    <input type="text" class="form-control" id="update-work-experience" value="dd" placeholder="输入工作经验">
+				    <input type="text" class="form-control" name="work_experience" id="update-work-experience" value="dd" placeholder="输入工作经验">
 				  </div>
 				  <div class="form-group">
 				    <label for="job-type">职位类型</label>
-				    <input type="text" class="form-control" id="update-job-type" value="dd" placeholder="输入职位类型">
+				    <input type="text" class="form-control" name="job_type" id="update-job-type" value="dd" placeholder="输入职位类型">
 				  </div>
 				  <div class="form-group">
 				    <label for="work-place">工作地点</label>
-				    <input type="text" class="form-control" id="update-work-place" value="dd" placeholder="输入工作地点">
+				    <input type="text" class="form-control" name="work_place" id="update-work-place" value="dd" placeholder="输入工作地点">
 				  </div>
 				  <div class="form-group">
 				    <label for="post-salary">岗位薪资</label>
-				    <input type="text" class="form-control" id="update-post-salary" value="dd" placeholder="输入岗位薪资">
+				    <input type="text" class="form-control" name="salary" id="update-salary" value="dd" placeholder="输入岗位薪资">
 				  </div>
 				</form>
 		      </div>
 		      <div class="modal-footer">
-		        <button type="button" class="btn btn-primary">提交</button>
+		        <button type="button" class="btn btn-primary btn-update">修改</button>
 		      </div>
 		    </div>
 		  </div>
 		</div>
-		
-		
+
 	</body>
 </html>
